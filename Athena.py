@@ -30,8 +30,12 @@ def wait_for_results(execution_ID):
     pass
 
 def get_results(status_message):
+<<<<<<< HEAD
     pass
 
+=======
+    print("results")
+>>>>>>> 6c3d4d0... Testing git from pycharm
 
 def run_query():
     response = submit_query(query, database, s3_output)
@@ -41,6 +45,7 @@ def run_query():
         print("query over")
         return 0
     elif status == "SUCCEEDED":
+        print("Success?")
         get_results(status)
     else:
         print(status)
