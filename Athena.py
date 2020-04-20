@@ -26,10 +26,11 @@ def submit_query(query, database, s3_output):
 def wait_for_results(execution_ID):
     # while loop
         # time module: wait a bit
-    return status
+    #return status\
+    pass
 
 def get_results(status_message):
-
+    pass
 
 
 def run_query():
