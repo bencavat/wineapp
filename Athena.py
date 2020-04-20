@@ -34,6 +34,7 @@ def get_results(status_message):
 
 def run_query():
     response = submit_query(query, database, s3_output)
+    print("submitted query")
     status = wait_for_results(response)
     if status == "FAILED" | status == "CANCELLED":
         print("query over")
