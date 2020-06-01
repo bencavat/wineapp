@@ -11,13 +11,11 @@ cleandata()
 
 dictionary = {"name" : None, "color" : "red", "acidity" : None, "body" : None}
 
-SALrequest = f'SELECT name,\tcolor,
-         body,
-         acidity
-FROM "wine_feb_24"."wine"
-WHERE acidity >= 2
-        AND body = 6
-        AND color = 'Red''
+SQLrequest = f'SELECT name,\tcolor,\tbody,\tacidity' \
+             f'FROM "wine_feb_24"."wine"' \
+             f'WHERE acidity >= 2' \
+             f'AND body = 6' \
+             f'AND color = "Red"'
 
 if color:
     SQLcolor = dictionary.get("color")
