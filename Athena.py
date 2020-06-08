@@ -3,6 +3,7 @@
 import boto3
 import time
 import sys
+from wineapp.jsonparsing import dump_data
 
 client = boto3.client('athena')
 query = "SELECT * FROM wine WHERE acidity >= 2"
