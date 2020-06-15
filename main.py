@@ -27,13 +27,15 @@ def update_belief(var_data, belief):
 size = width, height = 320, 240
 black = 0, 0, 0
 
+# Acidity and body
 var_names = ['Acidity', 'Body', 'Alcohol', 'Type']
 
 num_dummy_wines = 20
 
 var_data = np.abs(np.random.normal(0,1,(4, num_dummy_wines)))
 var_data[3,:] = np.random.randint(0,2, (1, num_dummy_wines))
-
+#replace var_data with list of lists from jsonparsing
+# dump_data(data["ResultSet"]["Rows"], json_file)
 
 global_belief = np.array([[0.2], [0.7], [1], [1]])
 
