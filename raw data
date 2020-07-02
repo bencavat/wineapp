@@ -21,7 +21,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Air\ufffdn"
+            "VarCharValue": "Air\u00e9n"
           },
           {
             "VarCharValue": "White"
@@ -469,7 +469,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Aligot\ufffd"
+            "VarCharValue": "Aligot\u00e9"
           },
           {
             "VarCharValue": "White"
@@ -917,7 +917,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Torront\ufffds"
+            "VarCharValue": "Torront\u00e9s"
           },
           {
             "VarCharValue": "White"
@@ -1045,7 +1045,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Blaufr\ufffdnkisch"
+            "VarCharValue": "Blaufr\u00e4nkisch"
           },
           {
             "VarCharValue": "Red"
@@ -1077,7 +1077,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Gr\ufffdner Veltliner"
+            "VarCharValue": "Gr\u00fcner Veltliner"
           },
           {
             "VarCharValue": "White"
@@ -1093,7 +1093,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Mar\ufffdchal Foch"
+            "VarCharValue": "Mar\u00e9chal Foch"
           },
           {
             "VarCharValue": "Red"
@@ -1237,7 +1237,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Ruch\ufffd"
+            "VarCharValue": "Ruch\u00e9"
           },
           {
             "VarCharValue": "Red"
@@ -1957,7 +1957,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "N\ufffdgrette"
+            "VarCharValue": "N\u00e9grette"
           },
           {
             "VarCharValue": "Red"
@@ -2085,7 +2085,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Mourv\ufffddre"
+            "VarCharValue": "Mourv\u00e8dre"
           },
           {
             "VarCharValue": "Red"
@@ -2169,13 +2169,13 @@
     }
   },
   "ResponseMetadata": {
-    "RequestId": "33d981e1-14eb-49fb-8c37-8cae3d12eea5",
+    "RequestId": "20ce84ab-9cff-4ec7-acb9-fa4b18ac284b",
     "HTTPStatusCode": 200,
     "HTTPHeaders": {
       "content-type": "application/x-amz-json-1.1",
-      "date": "Mon, 15 Jun 2020 17:46:55 GMT",
-      "x-amzn-requestid": "33d981e1-14eb-49fb-8c37-8cae3d12eea5",
-      "content-length": "20658",
+      "date": "Wed, 01 Jul 2020 22:31:35 GMT",
+      "x-amzn-requestid": "20ce84ab-9cff-4ec7-acb9-fa4b18ac284b",
+      "content-length": "20640",
       "connection": "keep-alive"
     },
     "RetryAttempts": 0
