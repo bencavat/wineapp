@@ -10,23 +10,30 @@ def read_data(inputfile):
 """
 
 
-def dump_data(data, outputfile):
-	with open(outputfile, 'w') as f:
+def dump_clean_data(data, outputfile):
+	with open(outputfile, 'w', encoding='UTF-8') as f:
 		# iterating through each "data" section to replace the keys
 		for i in data:
-			print(i["Data"])
 			i["Data"][0]['name'] = i["Data"][0].pop('VarCharValue')
 			i["Data"][1]['color'] = i["Data"][1].pop('VarCharValue')
 			i["Data"][2]['body'] = i["Data"][2].pop('VarCharValue')
 			i["Data"][3]['acidity'] = i["Data"][3].pop('VarCharValue')
-			print(i["Data"])
+			# print(i["Data"])
 			# example output: [{'name': 'Fiano'}, {'color': 'White'}, {'body': '5'}, {'acidity': '2'}]
-		json.dump(data, f, indent=2)
-#create a list of lists to feed main
+		json.dump(data, f, indent=2, ensure_ascii=False)
+
+
+def turn_data_into_array(inputfile):
+	with open(inputfile, 'r', encoding='UTF-8') as f:
+		content = json.load(f)
+		print(content)
+
 
 def main():
-	dump_data(data["ResultSet"]["Rows"], json_file)
-#import and call jsonparsing from main
+	# dump_clean_data(data["ResultSet"]["Rows"], json_file)
+	turn_data_into_array(json_file)
+# import and call jsonparsing from main
+
 
 if __name__ == "__main__":
 	main()

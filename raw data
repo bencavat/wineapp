@@ -21,7 +21,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Air\u00e9n"
+            "VarCharValue": "Airén"
           },
           {
             "VarCharValue": "White"
@@ -469,7 +469,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Aligot\u00e9"
+            "VarCharValue": "Aligoté"
           },
           {
             "VarCharValue": "White"
@@ -917,7 +917,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Torront\u00e9s"
+            "VarCharValue": "Torrontés"
           },
           {
             "VarCharValue": "White"
@@ -1045,7 +1045,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Blaufr\u00e4nkisch"
+            "VarCharValue": "Blaufränkisch"
           },
           {
             "VarCharValue": "Red"
@@ -1077,7 +1077,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Gr\u00fcner Veltliner"
+            "VarCharValue": "Grüner Veltliner"
           },
           {
             "VarCharValue": "White"
@@ -1093,7 +1093,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Mar\u00e9chal Foch"
+            "VarCharValue": "Maréchal Foch"
           },
           {
             "VarCharValue": "Red"
@@ -1237,7 +1237,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Ruch\u00e9"
+            "VarCharValue": "Ruché"
           },
           {
             "VarCharValue": "Red"
@@ -1957,7 +1957,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "N\u00e9grette"
+            "VarCharValue": "Négrette"
           },
           {
             "VarCharValue": "Red"
@@ -2085,7 +2085,7 @@
       {
         "Data": [
           {
-            "VarCharValue": "Mourv\u00e8dre"
+            "VarCharValue": "Mourvèdre"
           },
           {
             "VarCharValue": "Red"
@@ -2169,12 +2169,12 @@
     }
   },
   "ResponseMetadata": {
-    "RequestId": "20ce84ab-9cff-4ec7-acb9-fa4b18ac284b",
+    "RequestId": "0a8db9c0-a380-48bd-a81e-0b11d2af881e",
     "HTTPStatusCode": 200,
     "HTTPHeaders": {
       "content-type": "application/x-amz-json-1.1",
-      "date": "Wed, 01 Jul 2020 22:31:35 GMT",
-      "x-amzn-requestid": "20ce84ab-9cff-4ec7-acb9-fa4b18ac284b",
+      "date": "Sun, 05 Jul 2020 17:20:24 GMT",
+      "x-amzn-requestid": "0a8db9c0-a380-48bd-a81e-0b11d2af881e",
       "content-length": "20640",
       "connection": "keep-alive"
     },

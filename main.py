@@ -1,55 +1,41 @@
-from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 import numpy as np
-import sys
-
-np.random.seed(1)
-
-
-def closest_wine(var_data, belief):
-    #print(belief.shape)
-    print(var_data.shape)
-
-    error = var_data - belief
-    print(error)
-    absolute_sum_error = np.sum(np.abs(error), axis=0)
-    return var_data[:, np.argmin(absolute_sum_error.T)]
+from wineapp.Athena import submit_query
+from wineapp.Athena import get_query_results
+from wineapp.jsonparsing import dump_clean_data
+import boto3
 
 
-def stochastic_belief(belief):
-    return belief + np.random.normal(0,0.1)
+client = boto3.client('athena')
+query = "SELECT * FROM wine WHERE acidity >= 2"
+database = "wine_feb_24"
+s3_output = "s3://winebenathenaoutput/"
+json_file = "dump.json"
 
 
-def update_belief(var_data, belief):
+class ReturnedWines:
     pass
 
 
-size = width, height = 320, 240
-black = 0, 0, 0
+def plot_wines():
+    fig = plt.figure()
+    ax = fig.add_subplot()
+    # Artists
+    ax.set_title("Wines")
+    ax.set_xlabel('Acidity')
+    ax.set_ylabel('Body')
+    ax.plot([1,2,3], [3,2,1])
 
-# Acidity and body
-var_names = ['Acidity', 'Body', 'Alcohol', 'Type']
+    plt.show()
 
-num_dummy_wines = 20
 
-var_data = np.abs(np.random.normal(0,1,(4, num_dummy_wines)))
-var_data[3,:] = np.random.randint(0,2, (1, num_dummy_wines))
-#replace var_data with list of lists from jsonparsing
-# dump_data(data["ResultSet"]["Rows"], json_file)
+def main():
+    response = submit_query(query, database, s3_output)
+    results = get_query_results(response)
+    #[save_results(results, savefile) if results else print("No results, no savefile")]
+    dump_clean_data(results["ResultSet"]["Rows"], json_file)
+    plot_wines()
 
-global_belief = np.array([[0.2], [0.7], [1], [1]])
 
-individual_belief = stochastic_belief(global_belief)
-
-selected_wine = closest_wine(var_data[0:3,:], global_belief[0:3,:])
-
-fig = plt.figure()
-ax = fig.add_subplot(111, projection='3d')
-ax.scatter(var_data[0,:], var_data[1,:], var_data[2,:])
-ax.scatter([0.2], [0.7], [1])
-ax.scatter(selected_wine[0], selected_wine[1], selected_wine[2])
-
-ax.set_xlabel('Acidity')
-ax.set_ylabel('Body')
-ax.set_zlabel('Alcohol')
-plt.show()
+if __name__ == "__main__":
+    main()

@@ -4,13 +4,15 @@ import boto3
 import time
 import sys
 import json
-#from wineapp.jsonparsing import dump_data
+from wineapp.jsonparsing import dump_clean_data
 
 client = boto3.client('athena')
 query = "SELECT * FROM wine WHERE acidity >= 2"
 database = "wine_feb_24"
 s3_output = "s3://winebenathenaoutput/"
 savefile = "raw data"
+json_file = "dump.json"
+
 
 def submit_query(query, database, s3_output):
     response = client.start_query_execution(
@@ -22,8 +24,8 @@ def submit_query(query, database, s3_output):
 
 
 def save_results(results, savefile):
-    with open(savefile, 'w') as f:
-        json.dump(results, f, indent=2)
+    with open(savefile, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
 
 
 def wait_for_results(execution_ID):
@@ -63,8 +65,8 @@ def get_query_results(response):
 def main():
     response = submit_query(query, database, s3_output)
     results = get_query_results(response)
-    print(f'Type of results is {type(results)}')
-    [save_results(results, savefile) if results else print("No results, no savefile")]
+    #[save_results(results, savefile) if results else print("No results, no savefile")]
+    dump_clean_data(results["ResultSet"]["Rows"], json_file)
 
 
 if __name__ == "__main__":
