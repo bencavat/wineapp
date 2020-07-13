@@ -1,0 +1,132 @@
+name, color, body, acidity
+Airén, White, 1, 2
+Bourboulenc, White, 1, 2
+Parellada, White, 1, 2
+Prosecco, White, 1, 2
+Folle Blanche, White, 1, 3
+Hondarrabi Zuri, White, 1, 3
+Kerner, White, 1, 3
+Loureiro, White, 1, 3
+Melon de Bourgogne, White, 1, 3
+Riesling, White, 1, 3
+Bombino Bianco, White, 2, 2
+Delaware, White, 2, 2
+Roditis, White, 2, 2
+Silvaner, White, 2, 2
+Vernaccia, White, 2, 2
+Vidal, White, 2, 2
+Welsch-Riesling, White, 2, 2
+Colombard, White, 2, 3
+Pigato, White, 2, 3
+Scheurebe, White, 2, 3
+Trebbiano, White, 2, 3
+Vignoles, White, 2, 3
+Cortese, White, 3, 2
+Friulano, White, 3, 2
+Greco, White, 3, 2
+Inzolia, White, 3, 2
+Vilana, White, 3, 2
+Albarino, White, 3, 3
+Aligoté, White, 3, 3
+Arinto, White, 3, 3
+Rkatsiteli, White, 3, 3
+Savagnin, White, 3, 3
+Assyrtiko, White, 4, 2
+Brachetto, Red, 4, 2
+Catarratto, White, 4, 2
+Lambrusco, Red, 4, 2
+Niagara, White, 4, 2
+Catawba, Red, 4, 3
+Godello, White, 4, 3
+Grolleau, Red, 4, 3
+Sercial, White, 4, 3
+Seyval Blanc, White, 4, 3
+Verdicchio, White, 4, 3
+Vermento, White, 4, 3
+De Chaunac, Red, 5, 2
+Falanghina, White, 5, 2
+Fiano, White, 5, 2
+Frappato, Red, 5, 2
+Gamay, Red, 5, 2
+Baco Noir, Red, 5, 3
+Bical, White, 5, 3
+Dornfelder, Red, 5, 3
+Grignolino, Red, 5, 3
+Mauzac, White, 5, 3
+Molinara, Red, 5, 3
+Sauvignon Blanc, White, 5, 3
+Torrontés, White, 5, 3
+Verdelho, White, 5, 3
+Avesso, White, 6, 2
+Coda di volpe, White, 6, 2
+Corvina, Red, 6, 2
+Muscat Blanc, White, 6, 2
+St Laurent, Red, 6, 2
+Zweigelt, Red, 6, 2
+Blaufränkisch, Red, 6, 3
+Erbaluce, White, 6, 3
+Grüner Veltliner, White, 6, 3
+Maréchal Foch, Red, 6, 3
+Picpoul Blanc, White, 6, 3
+Pineau D'Aunis, Red, 6, 3
+Pinot Blanc, White, 6, 3
+Pinot Noir, Red, 6, 3
+Carnet Franc, Red, 7, 2
+Gros Manseng, White, 7, 2
+Kadarka, Red, 7, 2
+Marzemino, Red, 7, 2
+Ruché, Red, 7, 2
+Verdejo, White, 7, 2
+Chenin Blanc, White, 7, 3
+Freisa, Red, 7, 3
+Grechetto, White, 7, 3
+Petite Arvine, White, 7, 3
+Roussanne, White, 7, 3
+Tinta Negra Mole, Red, 7, 3
+Concord, Red, 8, 2
+Fer, Red, 8, 2
+Malagousia, White, 8, 2
+Malvasia nera, Red, 8, 2
+Petit Manseng, White, 8, 2
+Alfrocheiro, Red, 8, 3
+Barbera, Red, 8, 3
+Chardonnay, White, 8, 3
+Furmint, White, 8, 3
+Sangiovese, Red, 8, 3
+Saperavi, Red, 8, 3
+Xynomavro, Red, 8, 3
+Charbono, Red, 9, 2
+Piedirosso, Red, 9, 2
+Pinot Gris, Red, 9, 2
+Castelao, Red, 9, 3
+Counoise, White, 9, 3
+Meunier, White, 9, 3
+Refosco, White, 9, 3
+Teroldego, White, 9, 3
+Malbec, Red, 10, 2
+Touriga Franca, Red, 10, 2
+Nebbiolo, Red, 10, 3
+Norton, Red, 10, 3
+Sagrantino, Red, 10, 3
+Schioppettino, Red, 10, 3
+Tannat, Red, 10, 3
+Cabernet Sauvignon, Red, 11, 2
+Lagrein, Red, 11, 2
+Pignolo, Red, 11, 2
+Pinotage, Red, 11, 2
+Ruby cabernet, Red, 11, 2
+Uva di troia, Red, 11, 2
+Aglianico, Red, 11, 3
+Carignan, Red, 11, 3
+Cinsaut, Red, 11, 3
+Petit verdot, Red, 11, 3
+Négrette, Red, 12, 2
+Negroamaro, Red, 12, 2
+Petite Sirah, Red, 12, 2
+Syrah, Red, 12, 2
+Touriga Nacional, Red, 12, 2
+Zinfandel, Red, 12, 2
+Baga, Red, 12, 3
+Bobal, Red, 12, 3
+Mourvèdre, Red, 12, 3
+Nero d'avola, Red, 12, 3

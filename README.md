@@ -2,6 +2,9 @@
 wine repo
 
 
+Split red and white ones
+- you can plot twice (set the color for two different plots)
+
 Main:
 Currently, main is used as sergeant and main interface
 - I need to convert dump.json to a numpy array and feed that to the plot
