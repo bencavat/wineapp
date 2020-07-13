@@ -47,9 +47,6 @@ def get_query_results(response):
     if status == "SUCCEEDED":
         results = client.get_query_results(QueryExecutionId=response['QueryExecutionId'])
         print("Success!")
-        # now you gotta parse the json
-        # give random wines
-        print(results)
         return results
     elif status == "FAILED" or status == "CANCELLED":
         print(f"query over: status is {status}")
@@ -65,7 +62,6 @@ def get_query_results(response):
 def main():
     response = submit_query(query, database, s3_output)
     results = get_query_results(response)
-    #[save_results(results, savefile) if results else print("No results, no savefile")]
     dump_clean_data(results["ResultSet"]["Rows"], json_file)
 
 

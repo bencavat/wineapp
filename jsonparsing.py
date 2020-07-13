@@ -12,21 +12,26 @@ def read_data(inputfile):
 
 def dump_clean_data(data, outputfile):
 	with open(outputfile, 'w', encoding='UTF-8') as f:
+		array=[]
 		# iterating through each "data" section to replace the keys
 		for i in data:
-			i["Data"][0]['name'] = i["Data"][0].pop('VarCharValue')
-			i["Data"][1]['color'] = i["Data"][1].pop('VarCharValue')
-			i["Data"][2]['body'] = i["Data"][2].pop('VarCharValue')
-			i["Data"][3]['acidity'] = i["Data"][3].pop('VarCharValue')
-			# print(i["Data"])
-			# example output: [{'name': 'Fiano'}, {'color': 'White'}, {'body': '5'}, {'acidity': '2'}]
-		json.dump(data, f, indent=2, ensure_ascii=False)
+			name = i["Data"][0]['VarCharValue']
+			color = i["Data"][1]['VarCharValue']
+			body = i["Data"][2]['VarCharValue']
+			acidity = i["Data"][3]['VarCharValue']
+			string = f"{name}, {color}, {body}, {acidity}"
+			array.append(string)
+		f.write('\n'.join(array))
 
 
-def turn_data_into_array(inputfile):
-	with open(inputfile, 'r', encoding='UTF-8') as f:
-		content = json.load(f)
-		print(content)
+def turn_data_into_array(inputdata):
+	acidityarray = []
+	bodyarray = []
+	for i in inputdata:
+		acidityarray.append(i["Data"][3]['VarCharValue'])
+		bodyarray.append(i["Data"][2]['VarCharValue'])
+	return acidityarray, bodyarray
+
 
 
 def main():
