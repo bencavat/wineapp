@@ -21,7 +21,7 @@ class ReturnedWines:
 
 def plot_wines(x, y):
     fig, ax = plt.subplots()
-    ax.plot(x, y, 'o', color='black')
+    ax.scatter(x, y)
     ax.set(xlabel='Acidity', ylabel='Body',
            title='My wines')
     ax.grid()
@@ -37,10 +37,9 @@ def main():
     print(results)
     dump_clean_data(results["ResultSet"]["Rows"], clean_file)
     print(results)
-    acidity, body, color = turn_data_into_array(results["ResultSet"]["Rows"])
+    acidity, body = turn_data_into_array(results["ResultSet"]["Rows"])
     print(f'acidity is {acidity}')
     print(f'body is {body}')
-    print(f'color is {color}')
     plot_wines(acidity, body)
 
 

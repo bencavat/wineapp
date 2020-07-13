@@ -25,14 +25,12 @@ def dump_clean_data(data, outputfile):
 
 
 def turn_data_into_array(inputdata):
-	acidity_array = []
-	body_array = []
-	color_array = []
+	acidityarray = []
+	bodyarray = []
 	for i in inputdata:
-		acidity_array.append(i["Data"][3]['VarCharValue'])
-		body_array.append(i["Data"][2]['VarCharValue'])
-		color_array.append(i["Data"][1]['VarCharValue'])
-	return acidity_array, body_array, color_array
+		acidityarray.append(i["Data"][3]['VarCharValue'])
+		bodyarray.append(i["Data"][2]['VarCharValue'])
+	return acidityarray, bodyarray
 
 
 
