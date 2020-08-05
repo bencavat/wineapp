@@ -1,6 +1,6 @@
 def request_varietal():
     requested_wines = input("Enter the wine(s) you're looking for separated by a comma.")
-    varietal_query = f"SELECT * FROM wine WHERE name IN ( '{requested_wines}');"
+    varietal_query = f"SELECT * FROM wine WHERE name IN ('{requested_wines}');"
     print(varietal_query)
 
 
