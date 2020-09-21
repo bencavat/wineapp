@@ -31,8 +31,6 @@ def plot_wines(x, y, color):
     plt.legend(loc='upper left')
 
     plt.show()
-    # Artists
-
 
 def main():
     response = submit_query(query, database, s3_output)

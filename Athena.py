@@ -13,7 +13,7 @@ s3_output = "s3://winebenathenaoutput/"
 savefile = "raw data"
 json_file = "dump.json"
 
-
+# Run a SQL query on an S3 database and send results to an S3_output bucket. Return
 def submit_query(query, database, s3_output):
     response = client.start_query_execution(
         QueryString=query, QueryExecutionContext={'Database': database},
@@ -21,12 +21,6 @@ def submit_query(query, database, s3_output):
     )
     print('Execution ID: ' + response['QueryExecutionId'])
     return response
-
-
-def save_results(results, savefile):
-    with open(savefile, 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=2, ensure_ascii=False)
-
 
 def wait_for_results(execution_ID):
     for i in range(0,5):
