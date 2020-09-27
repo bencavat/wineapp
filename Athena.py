@@ -6,6 +6,12 @@ import sys
 import json
 from wineapp.jsonparsing import dump_clean_data
 
+'''
+Athena.py pings Athena on AWS with a specific SQL search
+- The output can be sent to the file "raw data"
+- Output can also be assigned to a json var
+'''
+
 client = boto3.client('athena')
 query = "SELECT * FROM wine WHERE acidity >= 2"
 database = "wine_feb_24"
