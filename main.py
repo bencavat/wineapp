@@ -10,7 +10,7 @@ import boto3
 client = boto3.client('athena')
 # query = "SELECT * FROM wine WHERE acidity >= 3 AND body>11;"
 query = "SELECT * FROM wine WHERE name IN ( 'Pinot Noir', 'Sauvignon Blanc');"
-database = "wine_feb_24"
+database = "wine_oct19"
 s3_output = "s3://winebenathenaoutput/"
 clean_file = "dump.csv"
 
