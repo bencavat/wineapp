@@ -8,7 +8,7 @@ from wineapp.jsonparsing import dump_clean_data
 
 client = boto3.client('athena')
 query = "SELECT * FROM wine WHERE acidity >= 2"
-database = "wine_feb_24"
+database = "wine_oct19"
 s3_output = "s3://winebenathenaoutput/"
 savefile = "raw data"
 json_file = "dump.json"
@@ -33,7 +33,6 @@ def wait_for_results(execution_ID):
         try:
             response = client.get_query_execution(QueryExecutionId=execution_ID)
             status = response['QueryExecution']['Status']['State']
-            print(status)
             if status == "SUCCEEDED" or status == "FAILED" or status == "CANCELLED":
                 return status
             else:

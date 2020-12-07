@@ -9,11 +9,20 @@ import boto3
 
 client = boto3.client('athena')
 # query = "SELECT * FROM wine WHERE acidity >= 3 AND body>11;"
-query = "SELECT * FROM wine WHERE name IN ( 'Pinot Noir', 'Sauvignon Blanc');"
-database = "wine_feb_24"
+#query = "SELECT * FROM wine WHERE name IN ( 'Pinot Noir', 'Sauvignon Blanc');"
+database = "wine_oct19"
 s3_output = "s3://winebenathenaoutput/"
 clean_file = "dump.csv"
 
+
+def words_to_query():
+    specVarietalBool = input("Do you want specific varietals?")
+    if specVarietalBool:
+        varietalsList = []
+        [varietalsList.append(f"'{varietal}'") for varietal in input("What varietals").split(',')]
+        varietalsClean = ', '.join(varietalsList)
+        query = f'SELECT * FROM wine WHERE name IN ({varietalsClean});'
+    return query
 
 def plot_wines(x, y, color):
     fig, ax = plt.subplots()
@@ -35,6 +44,7 @@ def plot_wines(x, y, color):
 
 
 def main():
+    query = words_to_query()
     response = submit_query(query, database, s3_output)
     results = get_query_results(response)
     #[save_results(results, savefile) if results else print("No results, no savefile")]
